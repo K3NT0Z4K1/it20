@@ -21,7 +21,38 @@ public class Main {
             System.out.println("5. Delete an Item ");
             System.out.println("6. Exit ");
   
+        
+      String action = scan.nextLine();
+                
+                 
+         if( action.equals("1")) {
+           
+          
+
+        } else if( action.equals("2")){
+
+           
+        } else if( action.equals("3")){
+
+          
+                     
+        } else if( action.equals("4")){
+
+           
+                     
+        } else if( action.equals("5")){
+
+           
+                     
+        } else if( action.equals("6")){
+
             
+                     
+        } else {
+
+       
+                     
+    }    
        
                  
                  
