@@ -27,30 +27,50 @@ public class Main {
                  
          if( action.equals("1")) {
            
-          
+           System.out.println("What is the item that you would like to add in the list? ");     
+           String items = scan.nextLine();
+           System.out.println();
+           list.insertItem( items);
+           System.out.println();
+                     
 
         } else if( action.equals("2")){
 
-           
+            list.displayItems();
+            System.out.println();
+                     
         } else if( action.equals("3")){
 
-          
+            System.out.println("What is the index of the item that you want to update?");
+            int item = Integer.parseInt(scan.nextLine());
+            System.out.println(" And what is the replacement item? ");
+            String repItem = scan.nextLine();
+            list.updateItem(item, repItem);
+            System.out.println();
                      
         } else if( action.equals("4")){
 
-           
+            System.out.println("What is the item that you want to find? ");
+            String item = scan.nextLine();
+            list.findItem(item);
+            System.out.println();
                      
         } else if( action.equals("5")){
 
-           
+            System.out.println("What is the index of the item that you want to delete?");
+            list.displayItems();
+            int  index = Integer.parseInt(scan.nextLine()) ;
+            list.deleteItem(index);
+            System.out.println();
                      
         } else if( action.equals("6")){
 
-            
+            System.out.println("Thank you for using my system =) ");
+            break;
                      
         } else {
 
-       
+        System.out.println("Invalid Choice ");
                      
     }    
        
