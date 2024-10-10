@@ -35,7 +35,7 @@ public class Main {
             // If the user wants to push a value in the stack
             if (choice == 1){
                 
-                
+                //it will ask the user how many values he/she wants to add , it will loop and will stop once it reaches how many values the user wants to push =)
                 System.out.println("How many times do you want to push");
                 int howMany = Integer.parseInt(scan.nextLine());
                 
