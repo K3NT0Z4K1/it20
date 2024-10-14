@@ -31,19 +31,21 @@ public class Main {
                  
                  String choice = scan.nextLine();
                  
+                 // Adding customers to the queue
                  if(choice.contentEquals("1")){
                      System.out.println("What do you want to add in the queue?");
                      String toAdd = scan.nextLine();
                      customerQueue.enqueue(new Customer(toAdd));
                      
-                    
+            
                      
                  }
-                 
+                 // Serve 
                  else if(choice.contentEquals("2")){
                      
                  }
                  
+                 //display
                  else  if(choice.contentEquals("3")){
                      
                  }
@@ -58,24 +60,7 @@ public class Main {
                  
                  
                  
-                 
-                 
-                 
-                 
-		 // Adding customers to the queue
-	     customerQueue.enqueue(new Customer("Cliff"));
-	     customerQueue.enqueue(new Customer("Janoi"));
-	     customerQueue.enqueue(new Customer("Redd"));
-	     
-	     System.out.println();
-	     customerQueue.displayQueue();
-	     
-	     // Serve 
-	     customerQueue.dequeue();
-	     
-	     System.out.println();
-	     customerQueue.displayQueue();
-
+ 
 
 	}
 
