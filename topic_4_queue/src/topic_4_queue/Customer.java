@@ -7,8 +7,10 @@ package topic_4_queue;
 
 /**
  *
- * @author ITLAB2-PC14-STUDENT
+ * @author ITLAB2-PC14-pagongpong
  */
 public class Customer {
     
-}
+
+    }
+
