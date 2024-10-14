@@ -28,6 +28,12 @@ public class Main {
                  System.out.println("2. Dequeue");
                  System.out.println("3. Display");
                  
+                 String choice = scan.nextLine();
+                 
+                 if(choice.contentEquals("1")){
+                     
+                 }
+                 
                  
                  
                  
