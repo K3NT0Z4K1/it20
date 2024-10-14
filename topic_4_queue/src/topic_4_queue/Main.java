@@ -23,6 +23,8 @@ public class Main {
                  
                  
                  System.out.println("Welcome to my queue system with scanner UI");
+                 
+                 while(true){
                  System.out.println("");
                  System.out.println("What do you want to do in the queue?");
                  System.out.println("1. Enqueue");
@@ -42,15 +44,19 @@ public class Main {
                  }
                  // Serve 
                  else if(choice.contentEquals("2")){
+                     customerQueue.dequeue();
                      
                  }
                  
                  //display
                  else  if(choice.contentEquals("3")){
-                     
+                     customerQueue.displayQueue();
                  }
                  
                  else if(choice.contentEquals("4")){
+                     System.out.println("Thank you");
+                     break;
+                     
                      
                  }
                  
@@ -58,7 +64,7 @@ public class Main {
                  
                  
                  
-                 
+                 }
                  
  
 
