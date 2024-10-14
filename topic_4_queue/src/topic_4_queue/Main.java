@@ -30,6 +30,7 @@ public class Main {
                  System.out.println("1. Enqueue");
                  System.out.println("2. Dequeue");
                  System.out.println("3. Display");
+                 System.out.println("4. Leave");
                  
                  String choice = scan.nextLine();
                  
