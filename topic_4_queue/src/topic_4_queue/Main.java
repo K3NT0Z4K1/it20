@@ -9,6 +9,7 @@ package topic_4_queue;
  *
  * @author ITLAB2-PC14-pagongpong
  */
+import java.util.Scanner;
 public class Main {
 
     
@@ -16,7 +17,23 @@ public class Main {
      	
 		
 		 Queue customerQueue = new Queue();
-		 
+		 Scanner scan = new Scanner(System.in);
+                 
+                 
+                 
+                 System.out.println("Welcome to my queue system with scanner UI");
+                 System.out.println("");
+                 System.out.println("What do you want to do in the queue?");
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
 		 // Adding customers to the queue
 	     customerQueue.enqueue(new Customer("Cliff"));
 	     customerQueue.enqueue(new Customer("Janoi"));
