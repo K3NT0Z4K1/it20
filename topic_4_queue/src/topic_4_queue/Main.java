@@ -22,6 +22,9 @@ public class Main {
 	     customerQueue.enqueue(new Customer("Janoi"));
 	     customerQueue.enqueue(new Customer("Redd"));
 	     
+	     System.out.println();
+	     customerQueue.displayQueue();
+	     
 	   
 
 	}
