@@ -25,6 +25,7 @@ public class Main {
                  System.out.println("");
                  System.out.println("What do you want to do in the queue?");
                  System.out.println("1. Enqueue");
+                 System.out.println("2. Dequeue");
                 
                  
                  
