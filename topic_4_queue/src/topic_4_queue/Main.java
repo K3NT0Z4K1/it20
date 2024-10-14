@@ -7,15 +7,23 @@ package topic_4_queue;
 
 /**
  *
- * @author ITLAB2-PC14-STUDENT
+ * @author ITLAB2-PC14-pagongpong
  */
-public class Topic_4_queue {
+public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+     	
+		
+		 Queue customerQueue = new Queue();
+		 
+		 // Adding customers to the queue
+	     customerQueue.enqueue(new Customer("Cliff"));
+	     customerQueue.enqueue(new Customer("Janoi"));
+	     customerQueue.enqueue(new Customer("Redd"));
+	     
+	   
+
+	}
+
 }
