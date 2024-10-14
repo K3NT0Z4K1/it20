@@ -28,7 +28,8 @@ public class Main {
 	     // Serve 
 	     customerQueue.dequeue();
 	     
-	  
+	     System.out.println();
+	     customerQueue.displayQueue();
 
 
 	}
