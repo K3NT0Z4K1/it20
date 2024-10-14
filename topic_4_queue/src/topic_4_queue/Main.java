@@ -34,6 +34,18 @@ public class Main {
                      
                  }
                  
+                 else if(choice.contentEquals("2")){
+                     
+                 }
+                 
+                 else  if(choice.contentEquals("3")){
+                     
+                 }
+                 
+                 else if(choice.contentEquals("4")){
+                     
+                 }
+                 
                  
                  
                  
