@@ -17,6 +17,7 @@ public class Main {
      	
 		
 		 Queue customerQueue = new Queue();
+                 
 		 Scanner scan = new Scanner(System.in);
                  
                  
@@ -31,6 +32,11 @@ public class Main {
                  String choice = scan.nextLine();
                  
                  if(choice.contentEquals("1")){
+                     System.out.println("What do you want to add in the queue?");
+                     String toAdd = scan.nextLine();
+                     customerQueue.enqueue(new Customer(toAdd));
+                     
+                    
                      
                  }
                  
