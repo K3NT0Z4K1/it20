@@ -18,13 +18,6 @@ public class BubbleSort {
             }
         }
     }
-    
-      public static void printArray(ArrayList<Integer> arr) {
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-    }
 
     public static void main(String[] args) {
 
@@ -43,13 +36,13 @@ public class BubbleSort {
 
             if (nums == i) {
 
-                System.out.println("Original array:");
-                printArray(NumsToSort);
+                System.out.println("Original ArrayList:");
+                System.out.println(NumsToSort);
 
                 bubbleSort(NumsToSort);
 
-                System.out.println("Sorted array:");
-                printArray(NumsToSort);
+                System.out.println("Sorted ArrayList:");
+                System.out.println(NumsToSort);
 
                 break;
             }
