@@ -19,7 +19,7 @@ public class BubbleSort {
         }
     }
     
-      public static void printArray(int[] arr) {
+      public static void printArray(ArrayList<Integer> arr) {
         for (int i : arr) {
             System.out.print(i + " ");
         }
@@ -44,12 +44,12 @@ public class BubbleSort {
             if (nums == i) {
 
                 System.out.println("Original array:");
-                System.out.println(NumsToSort);
+                printArray(NumsToSort);
 
                 bubbleSort(NumsToSort);
 
                 System.out.println("Sorted array:");
-                System.out.println(NumsToSort);
+                printArray(NumsToSort);
 
                 break;
             }
