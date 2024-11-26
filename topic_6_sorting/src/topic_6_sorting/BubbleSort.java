@@ -1,5 +1,8 @@
 package topic_6_sorting;
 
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
@@ -23,6 +26,13 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        ArrayList<String> NumsToSort = new ArrayList<String>();
+        
+        
+        
+        
         int[] arr = {64, 34, 25, 12, 22, 11, 90};
         System.out.println("Original array:");
         printArray(arr);
