@@ -4,35 +4,29 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SelectionSort {
-    public static void selectionSort(int[] arr) {
-        int n = arr.length;
+    public static void selectionSort(ArrayList<Integer> arr) {
+        int n = arr.size();  
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIndex]) {
+                if (arr.get(j) < arr.get(minIndex)) {
                     minIndex = j;
                 }
             }
-            // Swap the found minimum element with the first element
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+            int temp = arr.get(minIndex); 
+            arr.set(minIndex, arr.get(i)); 
+            arr.set(i, temp); 
         }
     }
 
-    public static void printArray(int[] arr) {
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-    }
+    
 
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
         ArrayList<Integer> NumsToSort = new ArrayList<Integer>();
 
-        System.out.println("Quick Sorting ");
+        System.out.println("Selection Sorting ");
 
         System.out.println("How many numbers you want to sort?");
         int nums = scan.nextInt();
@@ -48,6 +42,8 @@ public class SelectionSort {
 
                 System.out.println("Original ArrayList:");
                 System.out.println(NumsToSort);
+                
+                selectionSort(NumsToSort);
 
 
                 System.out.println("Sorted ArrayList:");
