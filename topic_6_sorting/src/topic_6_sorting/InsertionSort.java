@@ -43,7 +43,7 @@ public class InsertionSort {
                 System.out.println("Original ArrayList:");
                 System.out.println(NumsToSort);
 
-                bubbleSort(NumsToSort);
+                insertionSort(NumsToSort);
 
                 System.out.println("Sorted ArrayList:");
                 System.out.println(NumsToSort);
