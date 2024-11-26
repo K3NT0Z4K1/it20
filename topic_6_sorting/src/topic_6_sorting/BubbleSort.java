@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class BubbleSort {
+
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -26,20 +27,30 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        
+
         Scanner scan = new Scanner(System.in);
         ArrayList<String> NumsToSort = new ArrayList<String>();
-        
-        
-        
-        
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
-        System.out.println("Original array:");
-        printArray(arr);
 
-        bubbleSort(arr);
+        System.out.println("How many numbers you want to sort?");
+        int nums = scan.nextInt();
+        scan.nextLine();
+        
+        for(int i = 1; i <=  nums; i++){
+            
+            System.out.println("Enter the number you want to sort");
+            String num = scan.nextLine();
+            NumsToSort.add(num);
+            
+            
+        }
 
-        System.out.println("Sorted array:");
-        printArray(arr);
+//        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+//        System.out.println("Original array:");
+//        printArray(arr);
+//
+//        bubbleSort(arr);
+//
+//        System.out.println("Sorted array:");
+//        printArray(arr);
     }
 }
