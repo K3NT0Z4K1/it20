@@ -5,21 +5,21 @@ import java.util.ArrayList;
 
 public class BubbleSort {
 
-    public static void bubbleSort(int[] arr) {
-        int n = arr.length;
+    public static void bubbleSort(ArrayList<Integer> arr) {
+        int n = arr.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
+                if (arr.get(j) > arr.get(j + 1)) {
                     // Swap arr[j] and arr[j + 1]
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    int temp = arr.get(j);
+                    arr.set(j, arr.get(j + 1));
+                    arr.set(j + 1, temp);
                 }
             }
         }
     }
-
-    public static void printArray(int[] arr) {
+    
+      public static void printArray(int[] arr) {
         for (int i : arr) {
             System.out.print(i + " ");
         }
@@ -29,28 +29,32 @@ public class BubbleSort {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        ArrayList<String> NumsToSort = new ArrayList<String>();
+        ArrayList<Integer> NumsToSort = new ArrayList<Integer>();
 
         System.out.println("How many numbers you want to sort?");
         int nums = scan.nextInt();
         scan.nextLine();
-        
-        for(int i = 1; i <=  nums; i++){
-            
+
+        for (int i = 1; i <= nums; i++) {
+
             System.out.println("Enter the number you want to sort");
-            String num = scan.nextLine();
+            int num = scan.nextInt();
             NumsToSort.add(num);
-            
-            
+
+            if (nums == i) {
+
+                System.out.println("Original array:");
+                System.out.println(NumsToSort);
+
+                bubbleSort(NumsToSort);
+
+                System.out.println("Sorted array:");
+                System.out.println(NumsToSort);
+
+                break;
+            }
+
         }
 
-//        int[] arr = {64, 34, 25, 12, 22, 11, 90};
-//        System.out.println("Original array:");
-//        printArray(arr);
-//
-//        bubbleSort(arr);
-//
-//        System.out.println("Sorted array:");
-//        printArray(arr);
     }
 }
