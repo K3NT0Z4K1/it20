@@ -1,5 +1,8 @@
 package topic_6_sorting;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class SelectionSort {
     public static void selectionSort(int[] arr) {
         int n = arr.length;
@@ -25,13 +28,35 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {64, 25, 12, 22, 11};
-        System.out.println("Original array:");
-        printArray(arr);
 
-        selectionSort(arr);
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> NumsToSort = new ArrayList<Integer>();
 
-        System.out.println("Sorted array:");
-        printArray(arr);
+        System.out.println("Quick Sorting ");
+
+        System.out.println("How many numbers you want to sort?");
+        int nums = scan.nextInt();
+        scan.nextLine();
+
+        for (int i = 1; i <= nums; i++) {
+
+            System.out.println("Enter the number you want to sort");
+            int num = scan.nextInt();
+            NumsToSort.add(num);
+
+            if (nums == i) {
+
+                System.out.println("Original ArrayList:");
+                System.out.println(NumsToSort);
+
+
+                System.out.println("Sorted ArrayList:");
+                System.out.println(NumsToSort);
+
+                break;
+            }
+
+        }
+
     }
 }
