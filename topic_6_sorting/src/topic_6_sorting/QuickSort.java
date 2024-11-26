@@ -2,40 +2,37 @@ package topic_6_sorting;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class QuickSort {
-    public static void quickSort(ArrayList<Interger> arr, int low, int high) {
-        if (low < high) {
-            int pi = partition(arr, low, high);
 
-            // Recursively sort elements before and after partition
+    public static void quickSort(ArrayList<Integer> arr, int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high); 
+
             quickSort(arr, low, pi - 1);
             quickSort(arr, pi + 1, high);
         }
     }
 
-    private static int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
-        int i = low - 1;
+    private static int partition(ArrayList<Integer> arr, int low, int high) {
+        int pivot = arr.get(high);  
+        int i = low - 1;  
 
         for (int j = low; j < high; j++) {
-            if (arr[j] <= pivot) {
+            if (arr.get(j) <= pivot) {
                 i++;
-                // Swap arr[i] and arr[j]
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+
+                int temp = arr.get(i);
+                arr.set(i, arr.get(j));
+                arr.set(j, temp);
             }
         }
 
-        // Swap arr[i + 1] and arr[high] (or pivot)
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
+        int temp = arr.get(i + 1);
+        arr.set(i + 1, arr.get(high));
+        arr.set(high, temp);
 
-        return i + 1;
+        return i + 1;  
     }
-
 
 
     public static void main(String[] args) {
@@ -43,7 +40,7 @@ public class QuickSort {
         Scanner scan = new Scanner(System.in);
         ArrayList<Integer> NumsToSort = new ArrayList<Integer>();
 
-        System.out.println("Merge Sorting ");
+        System.out.println("Quick Sorting ");
 
         System.out.println("How many numbers you want to sort?");
         int nums = scan.nextInt();
@@ -60,7 +57,7 @@ public class QuickSort {
                 System.out.println("Original ArrayList:");
                 System.out.println(NumsToSort);
 
-                (NumsToSort);
+                quickSort(NumsToSort, 0, NumsToSort.size() - 1);
 
                 System.out.println("Sorted ArrayList:");
                 System.out.println(NumsToSort);
