@@ -1,17 +1,19 @@
 package topic_6_sorting;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class MergeSort {
-    public static void mergeSort(int[] arr) {
-        if (arr.length < 2) {
+
+    public static void mergeSort(ArrayList<Integer> arr) {
+        if (arr.size() < 2) {
             return;
         }
 
-        int mid = arr.length / 2;
-        int[] left = new int[mid];
-        int[] right = new int[arr.length - mid];
+        int mid = arr.size() / 2;
 
-        System.arraycopy(arr, 0, left, 0, mid);
-        System.arraycopy(arr, mid, right, 0, arr.length - mid);
+        ArrayList<Integer> left = new ArrayList<>(arr.subList(0, mid));
+        ArrayList<Integer> right = new ArrayList<>(arr.subList(mid, arr.size()));
 
         mergeSort(left);
         mergeSort(right);
@@ -19,40 +21,57 @@ public class MergeSort {
         merge(arr, left, right);
     }
 
-    private static void merge(int[] arr, int[] left, int[] right) {
+    public static void merge(ArrayList<Integer> arr, ArrayList<Integer> left, ArrayList<Integer> right) {
         int i = 0, j = 0, k = 0;
-        while (i < left.length && j < right.length) {
-            if (left[i] <= right[j]) {
-                arr[k++] = left[i++];
+
+        while (i < left.size() && j < right.size()) {
+            if (left.get(i) <= right.get(j)) {
+                arr.set(k++, left.get(i++));
             } else {
-                arr[k++] = right[j++];
+                arr.set(k++, right.get(j++));
             }
         }
 
-        while (i < left.length) {
-            arr[k++] = left[i++];
+        while (i < left.size()) {
+            arr.set(k++, left.get(i++));
         }
 
-        while (j < right.length) {
-            arr[k++] = right[j++];
+        while (j < right.size()) {
+            arr.set(k++, right.get(j++));
         }
-    }
-
-    public static void printArray(int[] arr) {
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
     }
 
     public static void main(String[] args) {
-        int[] arr = {38, 27, 43, 3, 9, 82, 10};
-        System.out.println("Original array:");
-        printArray(arr);
 
-        mergeSort(arr);
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> NumsToSort = new ArrayList<Integer>();
 
-        System.out.println("Sorted array:");
-        printArray(arr);
+        System.out.println("Merge Sorting ");
+
+        System.out.println("How many numbers you want to sort?");
+        int nums = scan.nextInt();
+        scan.nextLine();
+
+        for (int i = 1; i <= nums; i++) {
+
+            System.out.println("Enter the number you want to sort");
+            int num = scan.nextInt();
+            NumsToSort.add(num);
+
+            if (nums == i) {
+
+                System.out.println("Original ArrayList:");
+                System.out.println(NumsToSort);
+
+                mergeSort(NumsToSort);
+
+                System.out.println("Sorted ArrayList:");
+                System.out.println(NumsToSort);
+
+                break;
+            }
+
+        }
+
     }
 }
